@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZapSpot</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: yellow;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+        .container {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 3;
+        }
+        h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            position: relative;
+            z-index: 3;
+        }
+        .lightning {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            background: url('https://i.imgur.com/Jf6bIfR.png') no-repeat center;
+            background-size: cover;
+            opacity: 0;
+            animation: flash 1.5s infinite;
+            z-index: 1;
+        }
+        @keyframes flash {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 0.3; }
+        }
+    </style>
+</head>
+<body>
+    <div class="lightning"></div>
+    <div class="container">
+        <h1>Welcome to ZapSpot</h1>
+    </div>
+</body>
+</html>
